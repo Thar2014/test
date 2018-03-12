@@ -1,0 +1,26 @@
+<div>
+    <h3>欢迎登陆67badlist后台管理</h3>
+    <div>
+        <input type="text"
+        [(ngModel)]="userName" name="uname" placeholder="用户名" required id="uname">
+    </div>
+    <div>
+        <input type="password"
+        [(ngModel)]="userPwd" placeholder="用户密码" id="upwd">
+    </div>
+    <div>
+        <input (click)="login()" type="button" value="登录" id="bt-login">
+    </div>
+</div>
+<div>
+    <p>
+        管理员账号<br>
+        用户名:admin 密码:123456
+    </p>
+    <p>
+        普通用户账号<br>
+        用户名:admin1 密码:123456<br>
+        用户名:admin2 密码:123456<br>
+        用户名:admin3 密码:123456<br>
+    </p>
+</div>

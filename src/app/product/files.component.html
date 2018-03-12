@@ -1,0 +1,34 @@
+<div [ngSwitch]="isTrue">
+    <h3>档案管理</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>用户名</th>
+                <th>中文姓名</th>
+                <th>英文姓名</th>
+                <th>身份证号</th>
+                <th>欠款类型</th>
+                <th>欠款金额</th>
+                <th>欠款人地址</th>
+                <th>欠款人信息</th>
+                <th>欠款人公司</th>
+            </tr>
+        </thead>
+        <tbody *ngSwitchCase="true">
+            <tr *ngFor="let item of data">
+                <td>{{item.fid}}</td>
+                <td>{{item.fname}}</td>
+                <td>{{item.cname}}</td>
+                <td>{{item.ename}}</td>
+                <td>{{item.fcard}}</td>
+                <td>{{item.ftype}}</td>
+                <td>{{item.fnum}}</td>
+                <td>{{item.faddress}}</td>
+                <td>{{item.fintroduce}}</td>
+                <td>item.fcompany</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 *ngSwitchCase="false">权限不足无法访问</h1>
+</div>
